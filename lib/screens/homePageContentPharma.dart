@@ -59,26 +59,7 @@ class _HomeScreenPharmaState extends State<HomeScreenPharma> {
                             "Pharmacy",
                             style: MyFonts.heading,
                           ),
-                          CircleAvatar(
-                            backgroundColor: MyColors.lPrimary,
-                            radius: 24,
-                            child: CircleAvatar(
-                              radius: 20,
-                              child: ClipOval(
-                                child: Image.asset(
-                                  'assets/images/profile pic.jpg',
-                                  fit: BoxFit.cover,
-                                  errorBuilder: (context, error, stackTrace) {
-                                    return Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    );
-                                  },
-                                ),
-                              ),
-                            ),
-                          ),
+                          IconButton(onPressed: (){AuthService().signOut();}, icon: Icon(Icons.logout))
                         ],
                       ),
                     ),
